@@ -9,7 +9,7 @@ import io from "socket.io-client";
 import EmojiPicker from "emoji-picker-react";
 
 const socket =
-  io("http://localhost:5000");
+  io("https://chatapp-ixki.onrender.com");
 
 function App() {
 
@@ -174,7 +174,7 @@ function App() {
     try {
 
       const res = await axios.get(
-        "http://localhost:5000/users"
+        "https://chatapp-ixki.onrender.com/users"
       );
 
       setUsers(res.data);
@@ -197,7 +197,7 @@ function App() {
     }
 
     const res = await axios.post(
-      "http://localhost:5000/signup",
+      "https://chatapp-ixki.onrender.com/signup",
       {
         username,
         mobile,
@@ -227,7 +227,7 @@ function App() {
     try {
 
       const res = await axios.post(
-        "http://localhost:5000/login",
+        "https://chatapp-ixki.onrender.com/login",
         {
           username,
           password,
@@ -502,7 +502,7 @@ function App() {
                                 const res =
                                   await axios.get(
 
-                                    `http://localhost:5000/messages/${currentUser}/${user.username}`
+                                    `https://chatapp-ixki.onrender.com/messages/${currentUser}/${user.username}`
                                   );
 
                                 setMessages(
